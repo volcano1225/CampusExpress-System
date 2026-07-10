@@ -1,0 +1,9 @@
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.DAL\bin\Debug\Express.DAL.dll
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.DAL\bin\Debug\Express.DAL.pdb
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.DAL\bin\Debug\Express.Model.dll
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.DAL\bin\Debug\Express.Model.pdb
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.DAL\obj\Debug\Express.DAL.csproj.AssemblyReference.cache
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.DAL\obj\Debug\Express.DAL.csproj.CoreCompileInputs.cache
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.DAL\obj\Debug\Express..DB18FB62.Up2Date
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.DAL\obj\Debug\Express.DAL.dll
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.DAL\obj\Debug\Express.DAL.pdb
