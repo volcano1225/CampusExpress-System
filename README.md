@@ -42,52 +42,35 @@
 
 ## 项目结构
 
-CampusExpress/
-├── Express.UI/                  # 表示层
-│   ├── Frmlogin.cs
-│   ├── FrmMain.cs
-│   ├── FrmStudentManage.cs
-│   ├── FrmAdminManage.cs
-│   ├── FrmPersonal.cs
-│   ├── FrmPackageManage.cs
-│   ├── FrmMyPackage.cs
-│   ├── FrmSendManage.cs
-│   ├── FrmMySend.cs
-│   ├── FrmPickup.cs
-│   ├── FrmShelfManage.cs
-│   ├── FrmCategoryManage.cs
-│   ├── FrmNoticeManage.cs
-│   ├── FrmStatistics.cs
-│   ├── CaptchaHelper.cs
-│   ├── MD5Helper.cs
-│   ├── Global.cs
-│   └── Program.cs
-├── Express.BLL/                 # 业务逻辑层
-│   ├── AdminInfoBLL.cs
-│   ├── StudentInfoBLL.cs
-│   ├── ExpressPackageBLL.cs
-│   ├── SendRecordBLL.cs
-│   ├── ShelfInfoBLL.cs
-│   ├── ExpressCategoryBLL.cs
-│   └── SystemNoticeBLL.cs
-├── Express.DAL/                 # 数据访问层
-│   ├── AdminInfoDAL.cs
-│   ├── StudentInfoDal.cs
-│   ├── ExpressPackageDAL.cs
-│   ├── SendRecordDAL.cs
-│   ├── ShelfInfoDAL.cs
-│   ├── ExpressCategoryDAL.cs
-│   ├── SystemNoticeDAL.cs
-│   └── DBHelper.cs
-├── Express.Model/               # 实体类
-│   ├── AdminInfo.cs
-│   ├── StudentInfo.cs
-│   ├── ExpressPackage.cs
-│   ├── SendRecord.cs
-│   ├── ShelfInfo.cs
-│   ├── ExpressCategory.cs
-│   └── SystemNotice.cs
-└── App.config
+**Express.UI** - 表示层（14个窗体 + 辅助类）
+- Frmlogin.cs, FrmMain.cs
+- FrmStudentManage.cs, FrmAdminManage.cs, FrmPersonal.cs
+- FrmPackageManage.cs, FrmMyPackage.cs
+- FrmSendManage.cs, FrmMySend.cs, FrmPickup.cs
+- FrmShelfManage.cs, FrmCategoryManage.cs
+- FrmNoticeManage.cs, FrmStatistics.cs
+- CaptchaHelper.cs, MD5Helper.cs, Global.cs, Program.cs
+
+**Express.BLL** - 业务逻辑层
+- AdminInfoBLL.cs, StudentInfoBLL.cs
+- ExpressPackageBLL.cs, SendRecordBLL.cs
+- ShelfInfoBLL.cs, ExpressCategoryBLL.cs
+- SystemNoticeBLL.cs
+
+**Express.DAL** - 数据访问层
+- AdminInfoDAL.cs, StudentInfoDal.cs
+- ExpressPackageDAL.cs, SendRecordDAL.cs
+- ShelfInfoDAL.cs, ExpressCategoryDAL.cs
+- SystemNoticeDAL.cs, DBHelper.cs
+
+**Express.Model** - 实体类
+- AdminInfo.cs, StudentInfo.cs
+- ExpressPackage.cs, SendRecord.cs
+- ShelfInfo.cs, ExpressCategory.cs
+- SystemNotice.cs
+
+**配置文件**
+- App.config
 ## 核心设计亮点
 
 - 经典三层架构：UI/BLL/DAL严格分离，层与层通过Model实体类传递数据，便于维护和扩展
