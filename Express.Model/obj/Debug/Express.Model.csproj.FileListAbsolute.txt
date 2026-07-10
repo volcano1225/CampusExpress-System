@@ -1,0 +1,6 @@
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.Model\bin\Debug\Express.Model.dll
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.Model\bin\Debug\Express.Model.pdb
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.Model\obj\Debug\Express.Model.csproj.AssemblyReference.cache
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.Model\obj\Debug\Express.Model.csproj.CoreCompileInputs.cache
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.Model\obj\Debug\Express.Model.dll
+C:\Users\李灿阳\Desktop\实验作业\Express.UI\Express.Model\obj\Debug\Express.Model.pdb
