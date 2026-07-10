@@ -30,57 +30,38 @@
 | 数据统计 | FrmStatistics | ExpressPackageBLL/DAL | 包裹量/寄件量/取件量统计 |
 
 ## 系统架构
-┌─────────────────────────────────────┐
-│           UI 表示层 (WinForms)       │
-│  Frmlogin / FrmMain / FrmPackage... │
-└─────────────┬───────────────────────┘
-│ 调用
-┌─────────────▼───────────────────────┐
-│         BLL 业务逻辑层              │
-│  AdminInfoBLL / StudentInfoBLL      │
-│  ExpressPackageBLL / SendRecordBLL  │
-│  ShelfInfoBLL / ExpressCategoryBLL  │
-│  SystemNoticeBLL                    │
-└─────────────┬───────────────────────┘
-│ 调用
-┌─────────────▼───────────────────────┐
-│         DAL 数据访问层              │
-│  AdminInfoDAL / StudentInfoDal      │
-│  ExpressPackageDAL / SendRecordDAL  │
-│  ShelfInfoDAL / ExpressCategoryDAL  │
-│  SystemNoticeDAL / DBHelper         │
-└─────────────┬───────────────────────┘
-│
-┌─────────────▼───────────────────────┐
-│      SQL Server 数据库              │
-│  ExpressManager 数据库              │
-│  用户表 / 包裹表 / 寄件记录表        │
-│  货架表 / 分类表 / 通知表            │
-└─────────────────────────────────────┘
+
+- **UI 表示层**（WinForms）：14个窗体，用户交互
+  - Frmlogin, FrmMain, FrmStudentManage, FrmPackageManage...
+- **BLL 业务逻辑层**：业务规则、数据校验
+  - AdminInfoBLL, StudentInfoBLL, ExpressPackageBLL, SendRecordBLL, ShelfInfoBLL, ExpressCategoryBLL, SystemNoticeBLL
+- **DAL 数据访问层**：SQL操作、数据库连接
+  - AdminInfoDAL, StudentInfoDal, ExpressPackageDAL, SendRecordDAL, ShelfInfoDAL, ExpressCategoryDAL, SystemNoticeDAL, DBHelper
+- **数据库**：SQL Server（ExpressManager）
+  - 用户表、包裹表、寄件记录表、货架表、分类表、通知表
 
 ## 项目结构
 
 CampusExpress/
-├── Express.UI/                  # 表示层 - 14个WinForms窗体 + 辅助类
-│   ├── Frmlogin.cs              # 登录（验证码 + MD5加密）
-│   ├── FrmMain.cs               # 主界面
-│   ├── FrmStudentManage.cs      # 学生管理
-│   ├── FrmAdminManage.cs        # 管理员管理
-│   ├── FrmPersonal.cs           # 个人中心
-│   ├── FrmPackageManage.cs     # 包裹管理
-│   ├── FrmMyPackage.cs         # 我的包裹
-│   ├── FrmSendManage.cs        # 寄件管理
-│   ├── FrmMySend.cs            # 我的寄件
-│   ├── FrmPickup.cs            # 取件管理
-│   ├── FrmShelfManage.cs       # 货架管理
-│   ├── FrmCategoryManage.cs    # 分类管理
-│   ├── FrmNoticeManage.cs      # 通知管理
-│   ├── FrmStatistics.cs        # 数据统计
-│   ├── CaptchaHelper.cs        # 验证码生成辅助类
-│   ├── MD5Helper.cs            # MD5加密辅助类
-│   ├── Global.cs               # 全局变量/配置
-│   └── Program.cs              # 程序入口
-│
+├── Express.UI/                  # 表示层
+│   ├── Frmlogin.cs
+│   ├── FrmMain.cs
+│   ├── FrmStudentManage.cs
+│   ├── FrmAdminManage.cs
+│   ├── FrmPersonal.cs
+│   ├── FrmPackageManage.cs
+│   ├── FrmMyPackage.cs
+│   ├── FrmSendManage.cs
+│   ├── FrmMySend.cs
+│   ├── FrmPickup.cs
+│   ├── FrmShelfManage.cs
+│   ├── FrmCategoryManage.cs
+│   ├── FrmNoticeManage.cs
+│   ├── FrmStatistics.cs
+│   ├── CaptchaHelper.cs
+│   ├── MD5Helper.cs
+│   ├── Global.cs
+│   └── Program.cs
 ├── Express.BLL/                 # 业务逻辑层
 │   ├── AdminInfoBLL.cs
 │   ├── StudentInfoBLL.cs
@@ -89,7 +70,6 @@ CampusExpress/
 │   ├── ShelfInfoBLL.cs
 │   ├── ExpressCategoryBLL.cs
 │   └── SystemNoticeBLL.cs
-│
 ├── Express.DAL/                 # 数据访问层
 │   ├── AdminInfoDAL.cs
 │   ├── StudentInfoDal.cs
@@ -98,8 +78,7 @@ CampusExpress/
 │   ├── ShelfInfoDAL.cs
 │   ├── ExpressCategoryDAL.cs
 │   ├── SystemNoticeDAL.cs
-│   └── DBHelper.cs             # 数据库连接辅助类
-│
+│   └── DBHelper.cs
 ├── Express.Model/               # 实体类
 │   ├── AdminInfo.cs
 │   ├── StudentInfo.cs
@@ -108,8 +87,7 @@ CampusExpress/
 │   ├── ShelfInfo.cs
 │   ├── ExpressCategory.cs
 │   └── SystemNotice.cs
-│
-└── App.config                   # 配置文件
+└── App.config
 ## 核心设计亮点
 
 - 经典三层架构：UI/BLL/DAL严格分离，层与层通过Model实体类传递数据，便于维护和扩展
